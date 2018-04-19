@@ -1,0 +1,44 @@
+{
+  "name": "caller-dirname",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "author": "detrohutt@gmail.com",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "compile:cjs": "tsc -p tsconfig.cjs.json",
+    "compile:esm": "tsc -p tsconfig.esm.json",
+    "compile": "run-p compile:*",
+    "bundle": "rollup -c",
+    "build": "run-s clean compile bundle",
+    "test": "jest",
+    "prepare": "run-s build"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.6.5",
+    "eslint": "^4.19.1",
+    "eslint-plugin-jest": "^21.15.0",
+    "husky": "^1.0.0-rc.1",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.4",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.12.0",
+    "rollup": "^0.58.1",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "ts-jest": "^22.4.3",
+    "typescript": "^2.8.1",
+    "typescript-eslint-parser": "^14.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+  },
+  "files": ["dist/index.*"]
+}

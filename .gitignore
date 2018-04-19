@@ -1,0 +1,10 @@
+node_modules
+dist
+*.log*
+
+# Most files should be .ts
+*.mjs
+*.js
+
+# Exceptions
+!rollup.config.js
