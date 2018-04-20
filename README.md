@@ -15,7 +15,7 @@ $ npm i caller-dirname
 /home/detrohutt/test/caller-dirname/callee.js
 
 ```javascript
-import callerDirname from 'caller-dirname';
+import { callerDirname } from 'caller-dirname';
 
 export default () => callerDirname();
 ```
@@ -37,7 +37,7 @@ console.log(thisDirname()); /* /home/detrohutt/test/caller-dirname/deeper */
 ##### Example
 
 ```javascript
-import callerDirname from 'caller-dirname';
+import { callerDirname } from 'caller-dirname';
 
 export const thirdCallerDir = () => callerDirname({ depth: 3 });
 ```

@@ -1,4 +1,4 @@
-import callerDirname from '../src/index';
+import { callerDirname } from '../src/index';
 
 import { valueA } from '../__fixtures__/depth/a/fixture-a';
 import { valueB } from '../__fixtures__/depth/a/b/fixture-b';

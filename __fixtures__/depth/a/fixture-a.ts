@@ -1,4 +1,4 @@
-import callerDirname from '../../../src/index';
+import { callerDirname } from '../../../src/index';
 
 export const valueA = callerDirname();
 

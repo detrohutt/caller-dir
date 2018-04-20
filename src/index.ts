@@ -1,6 +1,6 @@
 import { dirname } from 'path';
 
-export default function callerDirname({ depth = 1 } = {}): string {
+export function callerDirname({ depth = 1 } = {}): string {
   if (typeof depth !== 'number' || depth < 1 || Math.floor(depth) !== depth)
     throw new Error('Depth must be a positive integer.');
 
