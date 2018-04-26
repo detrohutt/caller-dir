@@ -19,7 +19,7 @@ export default [
     },
     plugins: [
       builtins(),
-      resolve({ extensions: ['.js', '.mjs'], preferBuiltins: false }),
+      resolve({ extensions: ['.mjs', '.js'], preferBuiltins: false }),
       commonjs()
     ]
   }
