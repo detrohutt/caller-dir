@@ -9,7 +9,7 @@ export default [
       file: 'dist/index.js',
       format: 'cjs'
     },
-    plugins: [builtins(), resolve({ preferBuiltins: false }), commonjs()]
+    plugins: [builtins(), resolve(), commonjs()]
   },
   {
     input: 'dist/esm/index.js',
@@ -17,10 +17,6 @@ export default [
       file: 'dist/index.mjs',
       format: 'es'
     },
-    plugins: [
-      builtins(),
-      resolve({ extensions: ['.mjs', '.js'], preferBuiltins: false }),
-      commonjs()
-    ]
+    plugins: [builtins(), resolve({ extensions: ['.mjs', '.js'] }), commonjs()]
   }
 ];
